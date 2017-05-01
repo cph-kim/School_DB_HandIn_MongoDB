@@ -65,7 +65,7 @@ function NumUsers() {
           .toArray()
           .then((result) => {
             db.close();
-            resolve(result);
+            resolve(result[0].count);
           })
           .catch((err) => {
             db.close();
